@@ -8,6 +8,7 @@ import PropertyHeroSection from './pages/PropertyHeroSection/PropertyHeroSection
 import LoginPage from './pages/LoginPage/LoginPage'
 import RegistrationPage from './pages/RegistrationPage/RegistrationPage'
 import Footer from './Component/Footer'
+import PropertyListingPage from './pages/PropertyListingPage/PropertyListingPage'
 
 function App() {
 
@@ -29,6 +30,11 @@ function App() {
           path='Home'
           element={<PropertyHeroSection></PropertyHeroSection>}
         />
+        <Route
+          path='PropertyListing'
+          element={<PropertyListingPage/>}
+        />
+
       </Routes>
       <Footer/>
     </div>
