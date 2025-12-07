@@ -45,6 +45,10 @@ export default function Header() {
           color: #111827;
           margin: 0;
         }
+          .logoimg{
+            margin-right: 5px;
+            
+            }
 
         .navbar {
           padding: 1rem 0;
@@ -187,15 +191,17 @@ export default function Header() {
           .navbar {
             position: relative;
           }
+            
         }
       `}</style>
 
       <nav className="navbar header">
         <div className="navbar-container">
           <a href="#" className="navbar-brand">
-            <div className="logo-circle">
+            {/* <div className="logo-circle">
               <div className="logo-circle-inner"></div>
-            </div>
+            </div> */}
+            <img src="/logo2.png" alt="img" height={35} className='logoimg' />
             <span className="logo-text">PropEase</span>
           </a>
 
