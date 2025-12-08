@@ -12,7 +12,7 @@ export default function PropertyListingPage() {
       id: 1,
       image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80",
       title: "103/143 West Street, Crows Nest",
-      price: "$45,545",
+      price: "₹45,545",
       location: "Sydney, NSW",
       bedrooms: 10,
       bathrooms: 4,
@@ -24,7 +24,7 @@ export default function PropertyListingPage() {
       id: 2,
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80",
       title: "245 Oak Avenue, Melbourne",
-      price: "$67,890",
+      price: "₹67,890",
       location: "Melbourne, VIC",
       bedrooms: 4,
       bathrooms: 3,
@@ -36,7 +36,7 @@ export default function PropertyListingPage() {
       id: 3,
       image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80",
       title: "78 Beach Road, Brisbane",
-      price: "$38,200",
+      price: "₹38,200",
       location: "Brisbane, QLD",
       bedrooms: 3,
       bathrooms: 2,
@@ -48,7 +48,7 @@ export default function PropertyListingPage() {
       id: 4,
       image: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80",
       title: "567 Park Lane, Adelaide",
-      price: "$52,300",
+      price: "₹52,300",
       location: "Adelaide, SA",
       bedrooms: 5,
       bathrooms: 3,
@@ -60,7 +60,7 @@ export default function PropertyListingPage() {
       id: 5,
       image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=600&q=80",
       title: "89 Lake View Drive, Perth",
-      price: "$71,500",
+      price: "₹71,500",
       location: "Perth, WA",
       bedrooms: 6,
       bathrooms: 4,
@@ -72,7 +72,7 @@ export default function PropertyListingPage() {
       id: 6,
       image: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80",
       title: "321 City Center, Sydney",
-      price: "$42,100",
+      price: "₹42,100",
       location: "Sydney, NSW",
       bedrooms: 2,
       bathrooms: 2,
@@ -440,9 +440,9 @@ export default function PropertyListingPage() {
                     onChange={(e) => setPriceRange(e.target.value)}
                   >
                     <option value="all">All Prices</option>
-                    <option value="low">$0 - $50,000</option>
-                    <option value="mid">$50,000 - $100,000</option>
-                    <option value="high">$100,000+</option>
+                    <option value="low">₹0 - ₹50,000</option>
+                    <option value="mid">₹50,000 - ₹100,000</option>
+                    <option value="high">₹100,000+</option>
                   </select>
                   <ChevronDown size={18} className="chevron-icon" />
                 </div>

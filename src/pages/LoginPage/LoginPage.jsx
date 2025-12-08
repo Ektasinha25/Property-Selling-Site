@@ -327,12 +327,8 @@ export default function LoginPage() {
 
         <div className="login-right">
           <div className="login-form-container">
-            <div className="logo-section">
-              <div className="logo-circle">
-                <div className="logo-circle-inner"></div>
-              </div>
-              <span className="logo-text">PropEase</span>
-            </div>
+            <img src="/logo2.png" alt="img" height={35} className='logoimg' />
+            <span className="logo-text">PropEase</span>
 
             <h1 className="login-title">Welcome back</h1>
             <p className="login-subtitle">

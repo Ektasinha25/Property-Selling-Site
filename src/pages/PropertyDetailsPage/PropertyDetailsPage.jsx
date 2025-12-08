@@ -10,7 +10,7 @@ export default function PropertyDetailsPage() {
   const property = {
     id: 1,
     title: "Modern Luxury Villa with Ocean View",
-    price: "$1,250,000",
+    price: "₹1,250,000",
     location: "Malibu, California",
     bedrooms: 5,
     bathrooms: 4,
@@ -656,7 +656,7 @@ export default function PropertyDetailsPage() {
                   {property.images.map((_, index) => (
                     <button
                       key={index}
-                      className={`indicator-dot ${index === currentImageIndex ? 'active' : ''}`}
+                      className={`indicator-dot ₹{index === currentImageIndex ? 'active' : ''}`}
                       onClick={() => setCurrentImageIndex(index)}
                     />
                   ))}
@@ -668,10 +668,10 @@ export default function PropertyDetailsPage() {
                 {property.images.map((image, index) => (
                   <div
                     key={index}
-                    className={`thumbnail ${index === currentImageIndex ? 'active' : ''}`}
+                    className={`thumbnail ₹{index === currentImageIndex ? 'active' : ''}`}
                     onClick={() => setCurrentImageIndex(index)}
                   >
-                    <img src={image} alt={`Property ${index + 1}`} />
+                    <img src={image} alt={`Property ₹{index + 1}`} />
                   </div>
                 ))}
               </div>
@@ -691,7 +691,7 @@ export default function PropertyDetailsPage() {
                   </div>
                   <div className="action-buttons">
                     <button 
-                      className={`icon-button ${isSaved ? 'saved' : ''}`}
+                      className={`icon-button ₹{isSaved ? 'saved' : ''}`}
                       onClick={() => setIsSaved(!isSaved)}
                     >
                       <Heart size={24} fill={isSaved ? 'currentColor' : 'none'} />

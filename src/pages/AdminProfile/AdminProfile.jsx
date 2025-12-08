@@ -421,7 +421,7 @@ export default function AdminProfile() {
                     </div>
                     <div className="stat-item">
                       <span className="stat-label">Total Sales</span>
-                      <span className="stat-value">$12.4M</span>
+                      <span className="stat-value">₹12.4M</span>
                     </div>
                   </div>
                 </div>

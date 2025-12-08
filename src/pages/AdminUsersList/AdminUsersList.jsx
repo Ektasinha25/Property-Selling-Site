@@ -908,14 +908,14 @@ export default function AdminUsersList() {
 
               <div className="view-toggle">
                 <button
-                  className={`view-btn ${viewType === 'table' ? 'active' : ''}`}
+                  className={`view-btn ₹{viewType === 'table' ? 'active' : ''}`}
                   onClick={() => setViewType('table')}
                   title="Table View"
                 >
                   ≡
                 </button>
                 <button
-                  className={`view-btn ${viewType === 'grid' ? 'active' : ''}`}
+                  className={`view-btn ₹{viewType === 'grid' ? 'active' : ''}`}
                   onClick={() => setViewType('grid')}
                   title="Grid View"
                 >
@@ -928,7 +928,7 @@ export default function AdminUsersList() {
           {/* Results Info */}
           <div style={{ marginBottom: '1rem', color: '#6c757d', fontSize: '0.95rem' }}>
             Showing <strong>{filteredUsers.length}</strong> users
-            {selectedUsers.length > 0 && ` | ${selectedUsers.length} selected`}
+            {selectedUsers.length > 0 && ` | ₹{selectedUsers.length} selected`}
           </div>
 
           {/* Table View */}
@@ -985,7 +985,7 @@ export default function AdminUsersList() {
                                 <Phone size={14} style={{ color: '#6c757d' }} />
                                 {user.phone}
                               </div>
-                              <a href={`mailto:${user.email}`} style={{ color: '#007bff', textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                              <a href={`mailto:₹{user.email}`} style={{ color: '#007bff', textDecoration: 'none', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                                 <Mail size={14} />
                                 Email
                               </a>
@@ -998,19 +998,19 @@ export default function AdminUsersList() {
                             </div>
                           </td>
                           <td>
-                            <span className={`badge-custom badge-${user.role.toLowerCase()}`}>
+                            <span className={`badge-custom badge-₹{user.role.toLowerCase()}`}>
                               {user.role}
                             </span>
                           </td>
                           <td>
-                            <span className={`badge-custom badge-${user.status.toLowerCase()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
+                            <span className={`badge-custom badge-₹{user.status.toLowerCase()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
                               {getStatusIcon(user.status)}
                               {user.status}
                             </span>
                           </td>
                           <td>{user.joinDate}</td>
                           <td style={{ fontWeight: '600', color: '#212529' }}>
-                            {user.properties > 0 ? `${user.properties} listed` : 'N/A'}
+                            {user.properties > 0 ? `₹{user.properties} listed` : 'N/A'}
                           </td>
                           <td>
                             <div className="action-buttons">
@@ -1075,10 +1075,10 @@ export default function AdminUsersList() {
 
                         <div style={{ marginTop: '0.75rem', paddingTop: '0.75rem', borderTop: '1px solid #e9ecef' }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                            <span className={`badge-custom badge-${user.role.toLowerCase()}`}>
+                            <span className={`badge-custom badge-₹{user.role.toLowerCase()}`}>
                               {user.role}
                             </span>
-                            <span className={`badge-custom badge-${user.status.toLowerCase()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
+                            <span className={`badge-custom badge-₹{user.status.toLowerCase()}`} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem' }}>
                               {getStatusIcon(user.status)}
                               {user.status}
                             </span>
@@ -1142,7 +1142,7 @@ export default function AdminUsersList() {
               }).map(page => (
                 <button
                   key={page}
-                  className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
+                  className={`pagination-btn ₹{currentPage === page ? 'active' : ''}`}
                   onClick={() => setCurrentPage(page)}
                 >
                   {page}

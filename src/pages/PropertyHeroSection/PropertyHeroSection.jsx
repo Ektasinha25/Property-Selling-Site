@@ -536,19 +536,19 @@ export default function PropertyHeroSection() {
 
             <div className="tabs">
               <button 
-                className={`tab ${activeTab === 'rent' ? 'active' : ''}`}
+                className={`tab ₹{activeTab === 'rent' ? 'active' : ''}`}
                 onClick={() => setActiveTab('rent')}
               >
                 Rent
               </button>
               <button 
-                className={`tab ${activeTab === 'buy' ? 'active' : ''}`}
+                className={`tab ₹{activeTab === 'buy' ? 'active' : ''}`}
                 onClick={() => setActiveTab('buy')}
               >
                 Buy
               </button>
               <button 
-                className={`tab ${activeTab === 'sell' ? 'active' : ''}`}
+                className={`tab ₹{activeTab === 'sell' ? 'active' : ''}`}
                 onClick={() => setActiveTab('sell')}
               >
                 Sell
@@ -592,10 +592,10 @@ export default function PropertyHeroSection() {
                     <MapPin size={18} className="input-icon" />
                     <select className="form-select">
                       <option>Choose Price Range</option>
-                      <option>$0 - $100,000</option>
-                      <option>$100,000 - $300,000</option>
-                      <option>$300,000 - $500,000</option>
-                      <option>$500,000+</option>
+                      <option>₹0 - ₹100,000</option>
+                      <option>₹100,000 - ₹300,000</option>
+                      <option>₹300,000 - ₹500,000</option>
+                      <option>₹500,000+</option>
                     </select>
                   </div>
                   <ChevronDown size={18} className="chevron-icon" />
@@ -695,7 +695,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>
@@ -717,7 +717,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>
@@ -739,7 +739,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>
@@ -761,7 +761,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>
@@ -783,7 +783,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>
@@ -805,7 +805,7 @@ export default function PropertyHeroSection() {
                 </div>
                 <div className="property-footer">
                   <span className="property-posted">Posted by X Builder</span>
-                  <span className="property-price">$45,545</span>
+                  <span className="property-price">₹45,545</span>
                 </div>
               </div>
             </div>

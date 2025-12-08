@@ -17,7 +17,7 @@ export default function BuyerDashboard() {
       id: 1,
       image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400&q=80",
       title: "103/143 West Street, Crows Nest",
-      price: "$45,545",
+      price: "₹45,545",
       location: "Sydney, NSW",
       bedrooms: 10,
       bathrooms: 4,
@@ -28,7 +28,7 @@ export default function BuyerDashboard() {
       id: 2,
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80",
       title: "245 Oak Avenue, Melbourne",
-      price: "$67,890",
+      price: "₹67,890",
       location: "Melbourne, VIC",
       bedrooms: 4,
       bathrooms: 3,
@@ -39,7 +39,7 @@ export default function BuyerDashboard() {
       id: 3,
       image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80",
       title: "78 Beach Road, Brisbane",
-      price: "$38,200",
+      price: "₹38,200",
       location: "Brisbane, QLD",
       bedrooms: 3,
       bathrooms: 2,
@@ -597,7 +597,7 @@ export default function BuyerDashboard() {
 
       <div className="dashboard">
         {/* Sidebar */}
-        <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : 'mobile-hidden'}`}>
+        <aside className={`sidebar ₹{sidebarOpen ? 'mobile-open' : 'mobile-hidden'}`}>
           <div className="logo-section">
             <div className="logo-circle">
               <div className="logo-circle-inner"></div>
@@ -606,26 +606,26 @@ export default function BuyerDashboard() {
           </div>
 
           <nav className="nav-menu">
-            <div className={`nav-item ${activeTab === 'overview' ? 'active' : ''}`} onClick={() => setActiveTab('overview')}>
+            <div className={`nav-item ₹{activeTab === 'overview' ? 'active' : ''}`} onClick={() => setActiveTab('overview')}>
               <Home className="nav-icon" />
               <span className="nav-label">Overview</span>
             </div>
-            <div className={`nav-item ${activeTab === 'saved' ? 'active' : ''}`} onClick={() => setActiveTab('saved')}>
+            <div className={`nav-item ₹{activeTab === 'saved' ? 'active' : ''}`} onClick={() => setActiveTab('saved')}>
               <Heart className="nav-icon" />
               <span className="nav-label">Saved Properties</span>
             </div>
-            <div className={`nav-item ${activeTab === 'tours' ? 'active' : ''}`} onClick={() => setActiveTab('tours')}>
+            <div className={`nav-item ₹{activeTab === 'tours' ? 'active' : ''}`} onClick={() => setActiveTab('tours')}>
               <Calendar className="nav-icon" />
               <span className="nav-label">Scheduled Tours</span>
             </div>
-            <div className={`nav-item ${activeTab === 'messages' ? 'active' : ''}`} onClick={() => setActiveTab('messages')}>
+            <div className={`nav-item ₹{activeTab === 'messages' ? 'active' : ''}`} onClick={() => setActiveTab('messages')}>
               <MessageSquare className="nav-icon" />
               <span className="nav-label">Messages</span>
             </div>
 
             <div className="nav-divider"></div>
 
-            <div className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>
+            <div className={`nav-item ₹{activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>
               <Settings className="nav-icon" />
               <span className="nav-label">Settings</span>
             </div>
@@ -637,7 +637,7 @@ export default function BuyerDashboard() {
         </aside>
 
         {/* Main Content */}
-        <div className={`main-content ${sidebarOpen ? '' : 'full-width'}`}>
+        <div className={`main-content ₹{sidebarOpen ? '' : 'full-width'}`}>
           {/* Top Bar */}
           <div className="top-bar">
             <button className="menu-toggle" onClick={() => setSidebarOpen(!sidebarOpen)}>
@@ -673,7 +673,7 @@ export default function BuyerDashboard() {
             <div className="stats-grid">
               {stats.map((stat, index) => (
                 <div key={index} className="stat-card">
-                  <div className="stat-icon" style={{ background: `${stat.color}15` }}>
+                  <div className="stat-icon" style={{ background: `₹{stat.color}15` }}>
                     <stat.icon size={24} style={{ color: stat.color }} />
                   </div>
                   <div className="stat-content">
@@ -704,7 +704,7 @@ export default function BuyerDashboard() {
                         </div>
                         <div className="property-price-small">{property.price}</div>
                       </div>
-                      <span className={`status-badge ${property.status === 'Available' ? 'status-available' : 'status-pending'}`}>
+                      <span className={`status-badge ₹{property.status === 'Available' ? 'status-available' : 'status-pending'}`}>
                         {property.status}
                       </span>
                     </div>

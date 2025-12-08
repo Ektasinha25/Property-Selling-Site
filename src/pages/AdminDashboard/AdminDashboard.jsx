@@ -28,7 +28,7 @@ export default function AdminDashboard() {
     },
     {
       title: 'Total Revenue',
-      value: '$48.5K',
+      value: '₹48.5K',
       change: '+23.1%',
       isPositive: true,
       icon: TrendingUp,
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
       id: 1,
       title: 'Luxury Apartment in Downtown',
       seller: 'John Doe',
-      price: '$450,000',
+      price: '₹450,000',
       status: 'Active',
       date: '2024-01-15'
     },
@@ -57,7 +57,7 @@ export default function AdminDashboard() {
       id: 2,
       title: 'Modern Villa with Garden',
       seller: 'Jane Smith',
-      price: '$750,000',
+      price: '₹750,000',
       status: 'Pending',
       date: '2024-01-14'
     },
@@ -65,7 +65,7 @@ export default function AdminDashboard() {
       id: 3,
       title: 'Commercial Space',
       seller: 'Mike Johnson',
-      price: '$320,000',
+      price: '₹320,000',
       status: 'Active',
       date: '2024-01-13'
     },
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
       id: 4,
       title: 'Residential Complex',
       seller: 'Sarah Wilson',
-      price: '$1,200,000',
+      price: '₹1,200,000',
       status: 'Rejected',
       date: '2024-01-12'
     },
@@ -81,7 +81,7 @@ export default function AdminDashboard() {
       id: 5,
       title: 'Beachfront Property',
       seller: 'Robert Brown',
-      price: '$890,000',
+      price: '₹890,000',
       status: 'Active',
       date: '2024-01-11'
     }
@@ -487,7 +487,7 @@ export default function AdminDashboard() {
                       <Icon size={24} />
                     </div>
                   </div>
-                  <div className={`stat-change ${stat.isPositive ? 'positive' : 'negative'}`}>
+                  <div className={`stat-change ₹{stat.isPositive ? 'positive' : 'negative'}`}>
                     {stat.isPositive ? <ArrowUp size={16} /> : <ArrowDown size={16} />}
                     <span>{stat.change}</span>
                   </div>
@@ -555,7 +555,7 @@ export default function AdminDashboard() {
                       <td>{property.seller}</td>
                       <td>{property.price}</td>
                       <td>
-                        <span className={`badge-custom badge-${property.status.toLowerCase()}`}>
+                        <span className={`badge-custom badge-₹{property.status.toLowerCase()}`}>
                           {property.status}
                         </span>
                       </td>
@@ -612,7 +612,7 @@ export default function AdminDashboard() {
                         </td>
                         <td>{user.role}</td>
                         <td>
-                          <span className={`badge-custom badge-${user.status.toLowerCase()}`}>
+                          <span className={`badge-custom badge-₹{user.status.toLowerCase()}`}>
                             {user.status}
                           </span>
                         </td>

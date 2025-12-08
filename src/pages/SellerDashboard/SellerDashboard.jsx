@@ -10,7 +10,7 @@ export default function SellerDashboard() {
     { label: 'Total Properties', value: '12', icon: Home, color: '#3b82f6' },
     { label: 'Total Views', value: '2,847', icon: Eye, color: '#10b981' },
     { label: 'Total Inquiries', value: '34', icon: MessageSquare, color: '#f59e0b' },
-    { label: 'Total Sales', value: '$4.2M', icon: DollarSign, color: '#8b5cf6' }
+    { label: 'Total Sales', value: '₹4.2M', icon: DollarSign, color: '#8b5cf6' }
   ];
 
   const listedProperties = [
@@ -18,7 +18,7 @@ export default function SellerDashboard() {
       id: 1,
       image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400&q=80",
       title: "103/143 West Street, Crows Nest",
-      price: "$1,250,000",
+      price: "₹1,250,000",
       location: "Sydney, NSW",
       bedrooms: 4,
       bathrooms: 3,
@@ -32,7 +32,7 @@ export default function SellerDashboard() {
       id: 2,
       image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&q=80",
       title: "245 Oak Avenue, Melbourne",
-      price: "$890,000",
+      price: "₹890,000",
       location: "Melbourne, VIC",
       bedrooms: 3,
       bathrooms: 2,
@@ -46,7 +46,7 @@ export default function SellerDashboard() {
       id: 3,
       image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80",
       title: "78 Beach Road, Brisbane",
-      price: "$675,500",
+      price: "₹675,500",
       location: "Brisbane, QLD",
       bedrooms: 3,
       bathrooms: 2,
@@ -853,7 +853,7 @@ export default function SellerDashboard() {
 
       <div className="dashboard">
         {/* Sidebar */}
-        <aside className={`sidebar ${sidebarOpen ? 'mobile-open' : 'mobile-hidden'}`}>
+        <aside className={`sidebar ₹{sidebarOpen ? 'mobile-open' : 'mobile-hidden'}`}>
           <div className="logo-section">
             <div className="logo-circle">
               <div className="logo-circle-inner"></div>
@@ -862,26 +862,26 @@ export default function SellerDashboard() {
           </div>
 
           <nav className="nav-menu">
-            <div className={`nav-item ${activeTab === 'overview' ? 'active' : ''}`} onClick={() => setActiveTab('overview')}>
+            <div className={`nav-item ₹{activeTab === 'overview' ? 'active' : ''}`} onClick={() => setActiveTab('overview')}>
               <Home className="nav-icon" />
               <span className="nav-label">Overview</span>
             </div>
-            <div className={`nav-item ${activeTab === 'properties' ? 'active' : ''}`} onClick={() => setActiveTab('properties')}>
+            <div className={`nav-item ₹{activeTab === 'properties' ? 'active' : ''}`} onClick={() => setActiveTab('properties')}>
               <Home className="nav-icon" />
               <span className="nav-label">My Properties</span>
             </div>
-            <div className={`nav-item ${activeTab === 'inquiries' ? 'active' : ''}`} onClick={() => setActiveTab('inquiries')}>
+            <div className={`nav-item ₹{activeTab === 'inquiries' ? 'active' : ''}`} onClick={() => setActiveTab('inquiries')}>
               <MessageSquare className="nav-icon" />
               <span className="nav-label">Inquiries</span>
             </div>
-            <div className={`nav-item ${activeTab === 'analytics' ? 'active' : ''}`} onClick={() => setActiveTab('analytics')}>
+            <div className={`nav-item ₹{activeTab === 'analytics' ? 'active' : ''}`} onClick={() => setActiveTab('analytics')}>
               <BarChart3 className="nav-icon" />
               <span className="nav-label">Analytics</span>
             </div>
 
             <div className="nav-divider"></div>
 
-            <div className={`nav-item ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>
+            <div className={`nav-item ₹{activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>
               <Settings className="nav-icon" />
               <span className="nav-label">Settings</span>
             </div>
@@ -893,7 +893,7 @@ export default function SellerDashboard() {
         </aside>
 
         {/* Main Content */}
-        <div className={`main-content ${sidebarOpen ? '' : 'full-width'}`}>
+        <div className={`main-content ₹{sidebarOpen ? '' : 'full-width'}`}>
           {/* Top Bar */}
           <div className="top-bar">
             <div className="top-bar-left">
@@ -935,7 +935,7 @@ export default function SellerDashboard() {
             <div className="stats-grid">
               {stats.map((stat, index) => (
                 <div key={index} className="stat-card">
-                  <div className="stat-icon" style={{ background: `${stat.color}15` }}>
+                  <div className="stat-icon" style={{ background: `₹{stat.color}15` }}>
                     <stat.icon size={24} style={{ color: stat.color }} />
                   </div>
                   <div className="stat-content">
@@ -961,7 +961,7 @@ export default function SellerDashboard() {
                       <div className="property-info">
                         <div className="property-header-row">
                           <div className="property-name">{property.title}</div>
-                          <span className={`status-badge status-${property.status.toLowerCase()}`}>
+                          <span className={`status-badge status-₹{property.status.toLowerCase()}`}>
                             {property.status}
                           </span>
                         </div>
@@ -1043,7 +1043,7 @@ export default function SellerDashboard() {
       </div>
 
       {/* Add Property Modal */}
-      <div className={`modal-overlay ${showAddPropertyModal ? 'active' : ''}`}>
+      <div className={`modal-overlay ₹{showAddPropertyModal ? 'active' : ''}`}>
         <div className="modal">
           <div className="modal-header">
             <h2 className="modal-title">List New Property</h2>

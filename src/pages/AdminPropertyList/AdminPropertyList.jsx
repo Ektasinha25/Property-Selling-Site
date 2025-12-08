@@ -22,7 +22,7 @@ export default function AdminPropertyList() {
       id: 1,
       title: 'Luxury Apartment in Downtown',
       seller: 'John Doe',
-      price: '$450,000',
+      price: '₹450,000',
       category: 'Residential',
       status: 'Active',
       location: 'New York, NY',
@@ -36,7 +36,7 @@ export default function AdminPropertyList() {
       id: 2,
       title: 'Modern Villa with Garden',
       seller: 'Jane Smith',
-      price: '$750,000',
+      price: '₹750,000',
       category: 'Residential',
       status: 'Pending',
       location: 'Los Angeles, CA',
@@ -50,7 +50,7 @@ export default function AdminPropertyList() {
       id: 3,
       title: 'Commercial Space Downtown',
       seller: 'Mike Johnson',
-      price: '$320,000',
+      price: '₹320,000',
       category: 'Commercial',
       status: 'Active',
       location: 'Chicago, IL',
@@ -64,7 +64,7 @@ export default function AdminPropertyList() {
       id: 4,
       title: 'Residential Complex',
       seller: 'Sarah Wilson',
-      price: '$1,200,000',
+      price: '₹1,200,000',
       category: 'Residential',
       status: 'Rejected',
       location: 'Houston, TX',
@@ -78,7 +78,7 @@ export default function AdminPropertyList() {
       id: 5,
       title: 'Beachfront Property',
       seller: 'Robert Brown',
-      price: '$890,000',
+      price: '₹890,000',
       category: 'Residential',
       status: 'Active',
       location: 'Miami, FL',
@@ -715,14 +715,14 @@ export default function AdminPropertyList() {
 
               <div className="view-toggle">
                 <button
-                  className={`view-btn ${viewType === 'table' ? 'active' : ''}`}
+                  className={`view-btn ₹{viewType === 'table' ? 'active' : ''}`}
                   onClick={() => setViewType('table')}
                   title="Table View"
                 >
                   ≡
                 </button>
                 <button
-                  className={`view-btn ${viewType === 'grid' ? 'active' : ''}`}
+                  className={`view-btn ₹{viewType === 'grid' ? 'active' : ''}`}
                   onClick={() => setViewType('grid')}
                   title="Grid View"
                 >
@@ -735,7 +735,7 @@ export default function AdminPropertyList() {
           {/* Results Info */}
           <div style={{ marginBottom: '1rem', color: '#6c757d', fontSize: '0.95rem' }}>
             Showing <strong>{filteredProperties.length}</strong> properties
-            {selectedProperties.length > 0 && ` | ${selectedProperties.length} selected`}
+            {selectedProperties.length > 0 && ` | ₹{selectedProperties.length} selected`}
           </div>
 
           {/* Table View */}
@@ -792,7 +792,7 @@ export default function AdminPropertyList() {
                           </td>
                           <td>{property.category}</td>
                           <td>
-                            <span className={`badge-custom badge-${property.status.toLowerCase()}`}>
+                            <span className={`badge-custom badge-₹{property.status.toLowerCase()}`}>
                               {property.status}
                             </span>
                           </td>
@@ -865,7 +865,7 @@ export default function AdminPropertyList() {
 
                         <div className="property-footer">
                           <div className="property-price">{property.price}</div>
-                          <span className={`badge-custom property-status badge-${property.status.toLowerCase()}`}>
+                          <span className={`badge-custom property-status badge-₹{property.status.toLowerCase()}`}>
                             {property.status}
                           </span>
                         </div>
@@ -909,7 +909,7 @@ export default function AdminPropertyList() {
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                 <button
                   key={page}
-                  className={`pagination-btn ${currentPage === page ? 'active' : ''}`}
+                  className={`pagination-btn ₹{currentPage === page ? 'active' : ''}`}
                   onClick={() => setCurrentPage(page)}
                 >
                   {page}

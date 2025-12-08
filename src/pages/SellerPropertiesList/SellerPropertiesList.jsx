@@ -7,7 +7,7 @@ export default function SellerPropertiesList() {
       id: 1,
       title: "Modern Family Home",
       address: "123 Oak Street, New York, NY",
-      price: "$450,000",
+      price: "₹450,000",
       bedrooms: 4,
       bathrooms: 3,
       sqft: "2,500",
@@ -20,7 +20,7 @@ export default function SellerPropertiesList() {
       id: 2,
       title: "Downtown Luxury Condo",
       address: "456 Park Avenue, New York, NY",
-      price: "$625,000",
+      price: "₹625,000",
       bedrooms: 2,
       bathrooms: 2,
       sqft: "1,800",
@@ -33,7 +33,7 @@ export default function SellerPropertiesList() {
       id: 3,
       title: "Cozy Suburban House",
       address: "789 Maple Drive, Brooklyn, NY",
-      price: "$380,000",
+      price: "₹380,000",
       bedrooms: 3,
       bathrooms: 2,
       sqft: "1,900",
@@ -46,7 +46,7 @@ export default function SellerPropertiesList() {
       id: 4,
       title: "Elegant Victorian Estate",
       address: "321 Elm Street, Queens, NY",
-      price: "$825,000",
+      price: "₹825,000",
       bedrooms: 5,
       bathrooms: 4,
       sqft: "3,400",
@@ -59,7 +59,7 @@ export default function SellerPropertiesList() {
       id: 5,
       title: "Waterfront Villa",
       address: "555 Beach Road, Long Island, NY",
-      price: "$1,250,000",
+      price: "₹1,250,000",
       bedrooms: 6,
       bathrooms: 5,
       sqft: "4,800",
@@ -72,7 +72,7 @@ export default function SellerPropertiesList() {
       id: 6,
       title: "Urban Studio Apartment",
       address: "88 Broadway, Manhattan, NY",
-      price: "$295,000",
+      price: "₹295,000",
       bedrooms: 1,
       bathrooms: 1,
       sqft: "850",
@@ -85,7 +85,7 @@ export default function SellerPropertiesList() {
       id: 7,
       title: "Contemporary Townhouse",
       address: "432 Greenwich Ave, Brooklyn, NY",
-      price: "$780,000",
+      price: "₹780,000",
       bedrooms: 3,
       bathrooms: 3,
       sqft: "2,200",
@@ -98,7 +98,7 @@ export default function SellerPropertiesList() {
       id: 8,
       title: "Mountain View Retreat",
       address: "777 Highland Drive, Upstate NY",
-      price: "$520,000",
+      price: "₹520,000",
       bedrooms: 4,
       bathrooms: 3,
       sqft: "3,000",
@@ -576,25 +576,25 @@ export default function SellerPropertiesList() {
               <div className="d-flex justify-content-between align-items-center flex-wrap">
                 <div>
                   <button 
-                    className={`filter-btn ${filter === 'All' ? 'active' : ''}`}
+                    className={`filter-btn ₹{filter === 'All' ? 'active' : ''}`}
                     onClick={() => setFilter('All')}
                   >
                     All Properties
                   </button>
                   <button 
-                    className={`filter-btn ${filter === 'Active' ? 'active' : ''}`}
+                    className={`filter-btn ₹{filter === 'Active' ? 'active' : ''}`}
                     onClick={() => setFilter('Active')}
                   >
                     Active
                   </button>
                   <button 
-                    className={`filter-btn ${filter === 'Pending' ? 'active' : ''}`}
+                    className={`filter-btn ₹{filter === 'Pending' ? 'active' : ''}`}
                     onClick={() => setFilter('Pending')}
                   >
                     Pending
                   </button>
                   <button 
-                    className={`filter-btn ${filter === 'Sold' ? 'active' : ''}`}
+                    className={`filter-btn ₹{filter === 'Sold' ? 'active' : ''}`}
                     onClick={() => setFilter('Sold')}
                   >
                     Sold
@@ -614,7 +614,7 @@ export default function SellerPropertiesList() {
                   <div className="property-card">
                     <img src={property.image} alt={property.title} className="property-image" />
                     <div className="property-content">
-                      <span className={`status-badge ${property.status.toLowerCase()}`}>
+                      <span className={`status-badge ₹{property.status.toLowerCase()}`}>
                         {property.status}
                       </span>
                       <h3 className="property-title">{property.title}</h3>
