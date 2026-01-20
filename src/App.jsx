@@ -19,37 +19,39 @@ import SellerPropertiesList from './pages/SellerPropertiesList/SellerPropertiesL
 import AboutUs from './pages/AboutUs/AboutUs'
 import AdminPropertyList from './pages/AdminPropertyList/AdminPropertyList'
 import AdminUsersList from './pages/AdminUsersList/AdminUsersList'
+import AddProperty from './pages/AddProperty/AddProperty'
 
 function App() {
 
   return (
     <>
-    <div>
-      <Routes>
-        {/* Auth routes (no Header/Footer) */}
-        <Route path='/' element={<LoginPage/>} />
-        <Route path='register' element={<RegistrationPage/>} />
+      <div>
+        <Routes>
+          {/* Auth routes (no Header/Footer) */}
+          <Route path='/' element={<LoginPage />} />
+          <Route path='register' element={<RegistrationPage />} />
 
-        {/* All other routes render inside MainLayout (Header + Outlet + Footer) */}
-        <Route element={<MainLayout/>}>
-          <Route path='home' element={<PropertyHeroSection/>} />
-          <Route path='PropertyListing' element={<PropertyListingPage/>} />
-          <Route path='BuyerDashboard' element={<BuyerDashboard/>} />
-          <Route path='SellerDashboard' element={<SellerDashboard/>} />
-          <Route path='PropertyDetailsPage' element={<PropertyDetailsPage/>} />
-          <Route path='ContactUs' element={<ContactUs/>} />
-          <Route path='AdminProfile' element={<AdminProfile/>} />
-          <Route path='AdminDashboard' element={<AdminDashboard/>} />
-          <Route path='SellerPropertiesList' element={<SellerPropertiesList/>} />
-          <Route path='AboutUs' element={<AboutUs/>} />
-          <Route path='AdminPropertyList' element={<AdminPropertyList/>} />
-          <Route path='AdminUsersList' element={<AdminUsersList/>} />
-        </Route>
+          {/* All other routes render inside MainLayout (Header + Outlet + Footer) */}
+          <Route element={<MainLayout />}>
+            <Route path='home' element={<PropertyHeroSection />} />
+            <Route path='PropertyListing' element={<PropertyListingPage />} />
+            <Route path='AddProperty' element={<AddProperty />} />
+            <Route path='BuyerDashboard' element={<BuyerDashboard />} />
+            <Route path='SellerDashboard' element={<SellerDashboard />} />
+            <Route path='PropertyDetailsPage' element={<PropertyDetailsPage />} />
+            <Route path='ContactUs' element={<ContactUs />} />
+            <Route path='AdminProfile' element={<AdminProfile />} />
+            <Route path='AdminDashboard' element={<AdminDashboard />} />
+            <Route path='SellerPropertiesList' element={<SellerPropertiesList />} />
+            <Route path='AboutUs' element={<AboutUs />} />
+            <Route path='AdminPropertyList' element={<AdminPropertyList />} />
+            <Route path='AdminUsersList' element={<AdminUsersList />} />
+          </Route>
 
-        {/* Fallback: redirect unknown routes to login (adjust if you prefer different behavior) */}
-        <Route path='*' element={<LoginPage/>} />
-      </Routes>
-    </div>
+          {/* Fallback: redirect unknown routes to login (adjust if you prefer different behavior) */}
+          <Route path='*' element={<LoginPage />} />
+        </Routes>
+      </div>
     </>
   )
 }

@@ -600,10 +600,11 @@ export default function SellerPropertiesList() {
                     Sold
                   </button>
                 </div>
-                <button className="btn-add-property">
+                <a href="AddProperty"><button className="btn-add-property">
                   <i className="fas fa-plus me-2"></i>
                   Add New Property
                 </button>
+                </a>
               </div>
             </div>
 

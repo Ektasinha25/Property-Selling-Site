@@ -505,10 +505,11 @@ export default function AdminDashboard() {
                   <Download size={16} />
                   Export
                 </button>
-                <button className="btn-custom btn-primary-custom">
+                <a href="AddProperty"><button className="btn-custom btn-primary-custom">
                   <Plus size={16} />
                   Add Property
                 </button>
+                </a>
               </div>
             </div>
 
